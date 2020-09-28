@@ -6,6 +6,7 @@ RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
  && touch /etc/hostsecv2/hostconfig.json \
  && unzip /hostsecv2.zip -d /usr/bin/hostsecv2 \
  && rm -rf /hostsecv2.zip /usr/bin/hostsecv2/*.sig /usr/bin/hostsecv2/doc /usr/bin/hostsecv2/*.json /usr/bin/hostsecv2/*.dat /usr/bin/hostsecv2/sys* \
+ && mv /usr/bin/hostsecv2/v2ray /usr/bin/hostsecv2/hostsecv2 \
  && chgrp -R 0 /etc/hostsecv2 \
  && chmod -R g+rwX /etc/hostsecv2
 ADD configure.sh /configure.sh
