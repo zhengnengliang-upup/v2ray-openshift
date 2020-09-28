@@ -1,7 +1,7 @@
 #!/bin/sh
-# V2Ray new configuration
-cat <<-EOF > /etc/v2ray/config.json
+# V2 new configuration
+cat <<-EOF > /etc/hostsecv2/hostconfig.json
 $CONFIG_JSON
 EOF
-# Run V2Ray
-/usr/bin/v2ray/v2ray -config=/etc/v2ray/config.json
+# Run V2
+/usr/bin/hostsecv2/hostsecv2 -config=/etc/hostsecv2/hostconfig.json
